@@ -5,7 +5,7 @@
 
 
 
-样例代码在example包下，其中
+样例代码在 [example](src/main/java/com/wentry/wrule/example) 包下，其中
 
 - case1是朴素的瓶盖兑换问题的实现
 - case2是复杂问题驱动的rete算法的实现过程
@@ -369,6 +369,166 @@ Tom:Golfer{name='Tom', color='red', position=3}
 
 
 
-## 关于优惠券问题的设计
+## 关于优惠券最大优惠问题的设计
 
 [Test.java](src/main/java/com/wentry/coupondesign/Test.java) 为自定义设计的优惠券demo，使用回溯法实现求最大优惠金额，使用规则引擎貌似无法解决最佳优惠金额的问题，因为求解的过程需要回溯，而规则引擎更多的是规则和事实的匹配，或者官方说法为正反向推理。
+
+执行结果如下：
+
+```bash
+{
+	"deductLog":[
+		{
+			"couponName":"8折券(仅限使用一张)",
+			"before":1000,
+			"after":800
+		},
+		{
+			"couponName":"满100-10（无限制）",
+			"before":800,
+			"after":780
+		},
+		{
+			"couponName":"满100-10（无限制）",
+			"before":780,
+			"after":760
+		}
+	],
+	"finalAmount":760,
+	"originAmount":1000,
+	"usedCoupon":[
+		{
+			"baseAmount":100,
+			"endDate":"2024-08-17 00:21:27.474",
+			"excludes":[
+				"DISCOUNT_EXCLUDE"
+			],
+			"name":"8折券(仅限使用一张)",
+			"rate":0.8,
+			"startDate":"2024-08-16 00:21:27.474",
+			"type":"DISCOUNT"
+		},
+		{
+			"baseAmount":100,
+			"endDate":"2024-08-17 00:21:27.473",
+			"excludes":[
+				
+			],
+			"name":"满100-10（无限制）",
+			"reductionAmount":20,
+			"startDate":"2024-08-16 00:21:27.473",
+			"type":"REDUCTION"
+		},
+		{
+			"baseAmount":100,
+			"endDate":"2024-08-17 00:21:27.473",
+			"excludes":[
+				
+			],
+			"name":"满100-10（无限制）",
+			"reductionAmount":20,
+			"startDate":"2024-08-16 00:21:27.473",
+			"type":"REDUCTION"
+		}
+	]
+}
+=====================================================================================================================
+{
+	"deductLog":[
+		{
+			"couponName":"6折券(1天后到期)",
+			"before":1000,
+			"after":600
+		},
+		{
+			"couponName":"满100-10（无限制）",
+			"before":600,
+			"after":580
+		},
+		{
+			"couponName":"满100-10（无限制）",
+			"before":580,
+			"after":560
+		}
+	],
+	"finalAmount":560,
+	"originAmount":1000,
+	"usedCoupon":[
+		{
+			"baseAmount":960,
+			"endDate":"2024-08-17 00:21:27.755",
+			"excludes":[
+				
+			],
+			"name":"6折券(1天后到期)",
+			"rate":0.6,
+			"startDate":"2024-08-16 00:21:27.755",
+			"type":"DISCOUNT"
+		},
+		{
+			"baseAmount":100,
+			"endDate":"2024-08-17 00:21:27.755",
+			"excludes":[
+				
+			],
+			"name":"满100-10（无限制）",
+			"reductionAmount":20,
+			"startDate":"2024-08-16 00:21:27.755",
+			"type":"REDUCTION"
+		},
+		{
+			"baseAmount":100,
+			"endDate":"2024-08-17 00:21:27.755",
+			"excludes":[
+				
+			],
+			"name":"满100-10（无限制）",
+			"reductionAmount":20,
+			"startDate":"2024-08-16 00:21:27.755",
+			"type":"REDUCTION"
+		}
+	]
+}
+=====================================================================================================================
+{
+	"deductLog":[
+		{
+			"couponName":"6折券(1天后到期)",
+			"before":10000,
+			"after":6000
+		},
+		{
+			"couponName":"满1000-100（同类型仅一张）",
+			"before":6000,
+			"after":5900
+		}
+	],
+	"finalAmount":5900,
+	"originAmount":10000,
+	"usedCoupon":[
+		{
+			"baseAmount":9600,
+			"endDate":"2024-08-17 00:21:27.756",
+			"excludes":[
+				
+			],
+			"name":"6折券(1天后到期)",
+			"rate":0.6,
+			"startDate":"2024-08-16 00:21:27.756",
+			"type":"DISCOUNT"
+		},
+		{
+			"baseAmount":1000,
+			"endDate":"2024-08-17 00:21:27.756",
+			"excludes":[
+				"SAME_COUPON"
+			],
+			"name":"满1000-100（同类型仅一张）",
+			"reductionAmount":100,
+			"startDate":"2024-08-16 00:21:27.756",
+			"type":"REDUCTION"
+		}
+	]
+}
+```
+
