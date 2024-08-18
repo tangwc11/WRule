@@ -371,7 +371,7 @@ Tom:Golfer{name='Tom', color='red', position=3}
 
 ## 关于优惠券最大优惠问题的设计
 
-[Test.java](src/main/java/com/wentry/coupondesign/Test.java) 为自定义设计的优惠券demo，使用回溯法实现求最大优惠金额，使用规则引擎貌似无法解决最佳优惠金额的问题，因为求解的过程需要回溯，而规则引擎更多的是规则和事实的匹配，或者官方说法为正反向推理。
+ [coupondesign](src/main/java/com/wentry/coupondesign) 为自定义设计的优惠券demo，使用回溯法实现求最大优惠金额，使用规则引擎貌似无法解决最佳优惠金额的问题，因为求解的过程需要回溯，而规则引擎更多的是规则和事实的匹配，或者官方说法为正反向推理。
 
 执行结果如下：
 
