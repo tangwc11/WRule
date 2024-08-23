@@ -384,12 +384,12 @@ Tom:Golfer{name='Tom', color='red', position=3}
 			"after":800
 		},
 		{
-			"couponName":"满100-10（无限制）",
+			"couponName":"满100-20（无限制）",
 			"before":800,
 			"after":780
 		},
 		{
-			"couponName":"满100-10（无限制）",
+			"couponName":"满100-20（无限制）",
 			"before":780,
 			"after":760
 		}
@@ -414,7 +414,7 @@ Tom:Golfer{name='Tom', color='red', position=3}
 			"excludes":[
 				
 			],
-			"name":"满100-10（无限制）",
+			"name":"满100-20（无限制）",
 			"reductionAmount":20,
 			"startDate":"2024-08-16 00:21:27.473",
 			"type":"REDUCTION"
@@ -425,7 +425,7 @@ Tom:Golfer{name='Tom', color='red', position=3}
 			"excludes":[
 				
 			],
-			"name":"满100-10（无限制）",
+			"name":"满100-20（无限制）",
 			"reductionAmount":20,
 			"startDate":"2024-08-16 00:21:27.473",
 			"type":"REDUCTION"
@@ -441,12 +441,12 @@ Tom:Golfer{name='Tom', color='red', position=3}
 			"after":600
 		},
 		{
-			"couponName":"满100-10（无限制）",
+			"couponName":"满100-20（无限制）",
 			"before":600,
 			"after":580
 		},
 		{
-			"couponName":"满100-10（无限制）",
+			"couponName":"满100-20（无限制）",
 			"before":580,
 			"after":560
 		}
@@ -471,7 +471,7 @@ Tom:Golfer{name='Tom', color='red', position=3}
 			"excludes":[
 				
 			],
-			"name":"满100-10（无限制）",
+			"name":"满100-20（无限制）",
 			"reductionAmount":20,
 			"startDate":"2024-08-16 00:21:27.755",
 			"type":"REDUCTION"
@@ -482,7 +482,7 @@ Tom:Golfer{name='Tom', color='red', position=3}
 			"excludes":[
 				
 			],
-			"name":"满100-10（无限制）",
+			"name":"满100-20（无限制）",
 			"reductionAmount":20,
 			"startDate":"2024-08-16 00:21:27.755",
 			"type":"REDUCTION"
